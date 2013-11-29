@@ -1,1 +1,40 @@
-<h3>Home</h3>
+<!-- <h3>Home</h3> -->
+
+    <canvas id="canvas" height="450" width="450"></canvas>
+	<script>
+
+			var pieData = [
+			// {
+				// labels: ["Learn to code", "Make cool stuff", "Get a job"],
+
+				// dataset : [
+					{
+						value: 30,
+						color:"#F38630",
+						label: 'Get a job',
+						labelColor: 'black',
+					},
+					{
+						value : 10,
+						color : "#E0E4CC",
+						label: 'Make cool stuff',
+						labelColor: 'black',
+					},
+					{
+						value : 60,
+						color : "#69D2E7",
+						label: 'Learn to code',
+						labelColor: 'black',
+						labelFontSize: '16'
+					}
+				
+				// ]
+			// }
+			];
+
+		var myPie = new Chart(document.getElementById("canvas").getContext("2d")).Pie(pieData, {
+			animationSteps: 40,
+			animationEasing: 'easeInOutQuart'
+		});
+		
+		</script>
