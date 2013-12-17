@@ -1,3 +1,61 @@
 <% content_for :title do %>About<% end %>
-<h3>Enter Your Opinion</h3>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+
+<h3>Reason to take WDI</h3>
+
+
+
+<canvas id="canvas" height="450" width="450"></canvas>
+	<script>
+
+			var pieData = [
+
+					{
+						value: 10,
+						color:"#EBB035",
+						label: 'Get a job',
+						labelColor: 'black',
+					},
+					{
+						value : 90,
+						color : "#DD1E2F",
+						label: 'Make cool stuff',
+						labelColor: 'black',
+					},
+					{
+						value : 60,
+						color : "#06A2CB",
+						label: 'Learn to code',
+						labelColor: 'black',
+						labelFontSize: '16'
+					}
+
+					// {
+					// 	value : 60,
+					// 	color : "#218559",
+					// 	label: 'Learn to code',
+					// 	labelColor: 'black',
+					// 	labelFontSize: '16'
+					// }
+
+					// {
+					// 	value : 60,
+					// 	color : "#D0C6B1",
+					// 	label: 'Learn to code',
+					// 	labelColor: 'black',
+					// 	labelFontSize: '16'
+					// }
+				
+				// ]
+			// }
+			];
+
+		var myPie = new Chart(document.getElementById("canvas").getContext("2d")).Pie(pieData, {
+			animationSteps: 40,
+			animationEasing: 'easeInOutQuart'
+		});
+		
+		</script>
+
+<br/><br/>
+<%= link_to '#OH!PINE IT' %>

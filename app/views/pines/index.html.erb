@@ -1,0 +1,29 @@
+<h1>Listing pines</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>User</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pines.each do |pine| %>
+      <tr>
+        <td><%= pine.title %></td>
+        <td><%= pine.user %></td>
+        <td><%= link_to 'Show', pine %></td>
+        <td><%= link_to 'Edit', edit_pine_path(pine) %></td>
+        <td><%= link_to 'Destroy', pine, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pine', new_pine_path %>

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @pine.title %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @pine.user %>
+</p>
+
+<%= link_to 'Edit', edit_pine_path(@pine) %> |
+<%= link_to 'Back', pines_path %>

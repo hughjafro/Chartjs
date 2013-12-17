@@ -1,40 +1,45 @@
-<!-- <h3>Home</h3> -->
+<h3>What's Your Opinion?</h3>
 
-    <canvas id="canvas" height="450" width="450"></canvas>
-	<script>
 
-			var pieData = [
-			// {
-				// labels: ["Learn to code", "Make cool stuff", "Get a job"],
+<%= form_for @visitor do |v| %>
 
-				// dataset : [
-					{
-						value: 30,
-						color:"#F38630",
-						label: 'Get a job',
-						labelColor: 'black',
-					},
-					{
-						value : 10,
-						color : "#E0E4CC",
-						label: 'Make cool stuff',
-						labelColor: 'black',
-					},
-					{
-						value : 60,
-						color : "#69D2E7",
-						label: 'Learn to code',
-						labelColor: 'black',
-						labelFontSize: '16'
-					}
-				
-				// ]
-			// }
-			];
+<p>
+    <%= v.label :opinion %>
+    <%= v.text_field :title %><br><br>
+  </p>
+ 
+  <p>
+    <%= v.label "Reasons (up to 5)" %>
+    <%= v.text_field :text , :placeholder => "Reason One" %>
+    <input type="number" min="0" max="100" step="1.0" value="50" name="reason">
+  </p>
 
-		var myPie = new Chart(document.getElementById("canvas").getContext("2d")).Pie(pieData, {
-			animationSteps: 40,
-			animationEasing: 'easeInOutQuart'
-		});
-		
-		</script>
+  <p>
+    <%= v.text_field :text , :placeholder => "Reason Two" %>
+    <input type="number" min="0" max="100" step="1.0" placeholder: "Percentage" name="reason">
+  </p>
+
+  <p>
+    <%= v.text_field :text , :placeholder => "Reason Three" %>
+    <input type="number" min="0" max="100" step="1.0" value="50" name="reason">
+  </p>
+
+  <p>
+    <%= v.text_field :text , :placeholder => "Reason Four" %>
+    <input type="number" min="0" max="100" step="1.0" value="50" name="reason">
+  </p>
+
+  <p>
+    <%= v.text_field :text , :placeholder => "Reason Five" %>
+    <input type="number" min="0" max="100" step="1.0" value="50" name="reason">
+
+<!--     $(document).ready(function(){
+      $('.percent').mask('##00%', {reverse: true});
+    ); -->
+  </p>
+ 
+
+  <p>
+    <%= v.submit %>
+  </p>
+<% end %>
